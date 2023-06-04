@@ -10,7 +10,7 @@ window.onload = function() {
   var buttons = ['7', '8', '9', '/',
                  '4', '5', '6', '*',
                  '1', '2', '3', '-',
-                 '0', '.', '=', '+', 'C', '%', '/', '²'];
+                 '0', '.', '=', '+', 'C', '%', '(', ')'];
   buttons.forEach(function(buttonText) {
     var button = document.createElement('button');
     button.textContent = buttonText;
@@ -27,12 +27,9 @@ window.onload = function() {
         calculate();
       } else if (value === 'C') {
         clearDisplay();
+        calculateSquare();
       } else if (value === '%') {
         calculatePercentage();
-      } else if (value === '/') {
-        calculateFraction();
-      } else if (value === '²') {
-        calculateSquare();
       } else {
         display.value += value;
       }

@@ -2,10 +2,8 @@ function playGuessNumberGame() {
     let attempts = 0;
     const targetNumber = Math.floor(Math.random() * 101);
     console.log(`Загадане число: ${targetNumber}`);
-  
     while (true) {
       const guess = parseInt(prompt('Вгадайте число від 0 до 100:'));
-  
       if (isNaN(guess)) {
         alert('Введіть дійсне число!');
         continue;
